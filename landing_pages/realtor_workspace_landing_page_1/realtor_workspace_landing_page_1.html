@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" class="h-fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <title>Data Synse: Realtor Worksapce SaaS</title>
+</head>
+<body class="dark:bg-neutral-900">
+
+<main id="content h-full">
+
+<div class="overflow-hidden">
+<!-- Header -->
+<header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm py-3 md:py-0">
+  <nav class="max-w-[85rem] mt-4 w-full mx-auto px-4 md:px-6 lg:px-8">
+    <div class="relative md:flex md:items-center md:justify-between">
+      <div class="flex items-center justify-between">
+        <a class="flex-none focus:outline-none focus:opacity-80" href="#">
+          <!-- <svg class="w-28 h-auto" width="116" height="32" viewBox="0 0 116 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33.5696 30.2968V10.7968H37.4474V13.1789H37.6229C37.7952 12.7972 38.0445 12.4094 38.3707 12.0155C38.7031 11.6154 39.134 11.283 39.6634 11.0183C40.1989 10.7475 40.8636 10.6121 41.6577 10.6121C42.6918 10.6121 43.6458 10.8829 44.5199 11.4246C45.3939 11.9601 46.0926 12.7695 46.6158 13.8529C47.139 14.93 47.4006 16.2811 47.4006 17.9061C47.4006 19.488 47.1451 20.8237 46.6342 21.9132C46.1295 22.9966 45.4401 23.8183 44.5661 24.3784C43.6982 24.9324 42.7256 25.2094 41.6484 25.2094C40.8852 25.2094 40.2358 25.0832 39.7003 24.8308C39.1709 24.5785 38.737 24.2615 38.3984 23.8799C38.0599 23.4921 37.8014 23.1012 37.6229 22.7073H37.5028V30.2968H33.5696ZM37.4197 17.8877C37.4197 18.7309 37.5367 19.4665 37.7706 20.0943C38.0045 20.7222 38.343 21.2115 38.7862 21.5624C39.2294 21.9071 39.768 22.0794 40.402 22.0794C41.0421 22.0794 41.5838 21.904 42.027 21.5532C42.4702 21.1961 42.8056 20.7037 43.0334 20.0759C43.2673 19.4419 43.3842 18.7125 43.3842 17.8877C43.3842 17.069 43.2704 16.3488 43.0426 15.7272C42.8149 15.1055 42.4794 14.6192 42.0362 14.2683C41.593 13.9175 41.0483 13.7421 40.402 13.7421C39.7618 13.7421 39.2202 13.9113 38.777 14.2499C38.34 14.5884 38.0045 15.0685 37.7706 15.6902C37.5367 16.3119 37.4197 17.0444 37.4197 17.8877ZM49.2427 24.9786V10.7968H53.0559V13.2712H53.2037C53.4622 12.391 53.8961 11.7262 54.5055 11.2769C55.1149 10.8214 55.8166 10.5936 56.6106 10.5936C56.8076 10.5936 57.02 10.6059 57.2477 10.6306C57.4754 10.6552 57.6755 10.689 57.8478 10.7321V14.2222C57.6632 14.1668 57.4077 14.1175 57.0815 14.0745C56.7553 14.0314 56.4567 14.0098 56.1859 14.0098C55.6073 14.0098 55.0903 14.136 54.6348 14.3884C54.1854 14.6346 53.8284 14.9793 53.5638 15.4225C53.3052 15.8657 53.176 16.3765 53.176 16.9551V24.9786H49.2427ZM64.9043 25.2556C63.4455 25.2556 62.1898 24.9601 61.1373 24.3692C60.0909 23.7721 59.2845 22.9289 58.7182 21.8394C58.1519 20.7437 57.8688 19.448 57.8688 17.9523C57.8688 16.4935 58.1519 15.2132 58.7182 14.1114C59.2845 13.0096 60.0816 12.1509 61.1096 11.5354C62.1437 10.9199 63.3563 10.6121 64.7474 10.6121C65.683 10.6121 66.5539 10.7629 67.3603 11.0645C68.1728 11.36 68.8806 11.8062 69.4839 12.4033C70.0932 13.0004 70.5672 13.7513 70.9057 14.6561C71.2443 15.5548 71.4135 16.6074 71.4135 17.8138V18.8941H59.4384V16.4566H67.7111C67.7111 15.8903 67.588 15.3886 67.3418 14.9516C67.0956 14.5146 66.754 14.1729 66.317 13.9267C65.8861 13.6744 65.3844 13.5482 64.812 13.5482C64.2149 13.5482 63.6856 13.6867 63.2239 13.9637C62.7684 14.2345 62.4114 14.6007 62.1529 15.0624C61.8944 15.5179 61.762 16.0257 61.7559 16.5858V18.9033C61.7559 19.605 61.8851 20.2113 62.1437 20.7222C62.4083 21.2331 62.7807 21.627 63.2608 21.904C63.741 22.181 64.3103 22.3195 64.9689 22.3195C65.406 22.3195 65.8061 22.2579 66.1692 22.1348C66.5324 22.0117 66.8432 21.8271 67.1018 21.5808C67.3603 21.3346 67.5572 21.033 67.6927 20.676L71.3304 20.9161C71.1458 21.7901 70.7672 22.5534 70.1948 23.2058C69.6285 23.8522 68.896 24.3569 67.9974 24.7201C67.1048 25.0771 66.0738 25.2556 64.9043 25.2556ZM77.1335 6.06949V24.9786H73.2003V6.06949H77.1335ZM79.5043 24.9786V10.7968H83.4375V24.9786H79.5043ZM81.4801 8.96863C80.8954 8.96863 80.3937 8.77474 79.9752 8.38696C79.5628 7.99302 79.3566 7.52214 79.3566 6.97431C79.3566 6.43265 79.5628 5.96792 79.9752 5.58014C80.3937 5.1862 80.8954 4.98923 81.4801 4.98923C82.0649 4.98923 82.5635 5.1862 82.9759 5.58014C83.3944 5.96792 83.6037 6.43265 83.6037 6.97431C83.6037 7.52214 83.3944 7.99302 82.9759 8.38696C82.5635 8.77474 82.0649 8.96863 81.4801 8.96863ZM89.7415 16.7797V24.9786H85.8083V10.7968H89.5569V13.2989H89.723C90.037 12.4741 90.5632 11.8216 91.3019 11.3415C92.0405 10.8552 92.9361 10.6121 93.9887 10.6121C94.9735 10.6121 95.8322 10.8275 96.5647 11.2584C97.2971 11.6893 97.8665 12.3048 98.2728 13.105C98.679 13.899 98.8821 14.8469 98.8821 15.9487V24.9786H94.9489V16.6505C94.9551 15.7826 94.7335 15.1055 94.2841 14.6192C93.8348 14.1268 93.2162 13.8806 92.4283 13.8806C91.8989 13.8806 91.4311 13.9944 91.0249 14.2222C90.6248 14.4499 90.3109 14.7823 90.0831 15.2193C89.8615 15.6502 89.7477 16.1703 89.7415 16.7797ZM107.665 25.2556C106.206 25.2556 104.951 24.9601 103.898 24.3692C102.852 23.7721 102.045 22.9289 101.479 21.8394C100.913 20.7437 100.63 19.448 100.63 17.9523C100.63 16.4935 100.913 15.2132 101.479 14.1114C102.045 13.0096 102.842 12.1509 103.87 11.5354C104.905 10.9199 106.117 10.6121 107.508 10.6121C108.444 10.6121 109.315 10.7629 110.121 11.0645C110.934 11.36 111.641 11.8062 112.245 12.4033C112.854 13.0004 113.328 13.7513 113.667 14.6561C114.005 15.5548 114.174 16.6074 114.174 17.8138V18.8941H102.199V16.4566H110.472C110.472 15.8903 110.349 15.3886 110.103 14.9516C109.856 14.5146 109.515 14.1729 109.078 13.9267C108.647 13.6744 108.145 13.5482 107.573 13.5482C106.976 13.5482 106.446 13.6867 105.985 13.9637C105.529 14.2345 105.172 14.6007 104.914 15.0624C104.655 15.5179 104.523 16.0257 104.517 16.5858V18.9033C104.517 19.605 104.646 20.2113 104.905 20.7222C105.169 21.2331 105.542 21.627 106.022 21.904C106.502 22.181 107.071 22.3195 107.73 22.3195C108.167 22.3195 108.567 22.2579 108.93 22.1348C109.293 22.0117 109.604 21.8271 109.863 21.5808C110.121 21.3346 110.318 21.033 110.454 20.676L114.091 20.9161C113.907 21.7901 113.528 22.5534 112.956 23.2058C112.389 23.8522 111.657 24.3569 110.758 24.7201C109.866 25.0771 108.835 25.2556 107.665 25.2556Z" fill="currentColor" class="fill-shamrock-600 dark:fill-white-50"/>
+            <path d="M1 28.9786V15.9786C1 9.35116 6.37258 3.97858 13 3.97858C19.6274 3.97858 25 9.35116 25 15.9786C25 22.606 19.6274 27.9786 13 27.9786H12" class="stroke-shamrock-600 dark:stroke-white-50" stroke="currentColor" stroke-width="2"/>
+            <path d="M5 28.9786V16.1386C5 11.6319 8.58172 7.97858 13 7.97858C17.4183 7.97858 21 11.6319 21 16.1386C21 20.6452 17.4183 24.2986 13 24.2986H12" class="stroke-shamrock-600 dark:stroke-white-50" stroke="currentColor" stroke-width="2"/>
+            <circle cx="13" cy="16" r="5" fill="currentColor" class="fill-shamrock-600 dark:fill-white-50"/>
+          </svg> -->
+
+          <svg class="w-32 h-auto" width="438" height="165" viewBox="0 0 438 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.57605 10.0407V155C4.57605 158.314 7.20545 160.976 10.5146 160.802C34.3323 159.547 121.699 150.347 122.57 82.9025C123.441 15.4046 34.6678 5.6423 10.5547 4.23571C7.23079 4.04182 4.57605 6.71116 4.57605 10.0407Z" stroke="url(#paint0_linear_18_34)" stroke-width="8"/>
+            <path d="M103.609 82.5C103.609 86.7223 99.9109 90.1451 95.3485 90.1451C90.7862 90.1451 87.0876 86.7223 87.0876 82.5C87.0876 78.2777 90.7862 74.8549 95.3485 74.8549C99.9109 74.8549 103.609 78.2777 103.609 82.5Z" fill="#2CE197"/>
+            <path d="M137.774 94.452C137.774 92.2333 138.393 90.292 139.63 88.628C140.867 86.964 142.574 85.6627 144.75 84.724C146.926 83.7427 149.422 83.252 152.238 83.252C153.603 83.252 154.947 83.38 156.27 83.636C157.593 83.8493 158.745 84.1693 159.726 84.596V83.124C159.726 81.2893 159.171 79.8813 158.062 78.9C156.953 77.9187 155.267 77.428 153.006 77.428C151.129 77.428 149.358 77.748 147.694 78.388C146.073 79.028 144.345 79.9453 142.51 81.14L139.438 74.612C141.657 73.1613 143.961 72.0733 146.35 71.348C148.782 70.6227 151.342 70.26 154.03 70.26C159.065 70.26 162.969 71.476 165.742 73.908C168.558 76.2973 169.966 79.7747 169.966 84.34V93.108C169.966 94.132 170.115 94.8573 170.414 95.284C170.755 95.668 171.331 95.9027 172.142 95.988V104.5C171.289 104.671 170.478 104.799 169.71 104.884C168.985 104.969 168.345 105.012 167.79 105.012C165.87 105.012 164.398 104.628 163.374 103.86C162.393 103.092 161.774 102.047 161.518 100.724L161.326 99.252C159.833 101.172 158.041 102.644 155.95 103.668C153.902 104.649 151.747 105.14 149.486 105.14C147.267 105.14 145.262 104.671 143.47 103.732C141.721 102.793 140.334 101.513 139.31 99.892C138.286 98.2707 137.774 96.4573 137.774 94.452ZM158.126 95.732C158.595 95.348 158.979 94.9213 159.278 94.452C159.577 93.9827 159.726 93.5347 159.726 93.108V90.1C158.873 89.7587 157.913 89.5027 156.846 89.332C155.822 89.1187 154.862 89.012 153.966 89.012C152.089 89.012 150.531 89.4387 149.294 90.292C148.057 91.1027 147.438 92.1907 147.438 93.556C147.438 94.324 147.651 95.028 148.078 95.668C148.505 96.308 149.081 96.82 149.806 97.204C150.574 97.588 151.47 97.78 152.494 97.78C153.518 97.78 154.542 97.588 155.566 97.204C156.59 96.82 157.443 96.3293 158.126 95.732ZM198.833 102.708C197.895 103.092 196.849 103.476 195.697 103.86C194.588 104.244 193.415 104.543 192.177 104.756C190.94 105.012 189.724 105.14 188.529 105.14C186.823 105.14 185.244 104.863 183.793 104.308C182.385 103.711 181.255 102.751 180.401 101.428C179.591 100.105 179.185 98.356 179.185 96.18V78.644H174.897V70.9H179.185V60.212H189.425V70.9H196.273V78.644H189.425V92.66C189.425 93.7693 189.703 94.58 190.257 95.092C190.812 95.5613 191.516 95.796 192.369 95.796C193.095 95.796 193.863 95.668 194.673 95.412C195.527 95.156 196.252 94.8787 196.849 94.58L198.833 102.708ZM200.711 94.452C200.711 92.2333 201.33 90.292 202.567 88.628C203.805 86.964 205.511 85.6627 207.687 84.724C209.863 83.7427 212.359 83.252 215.175 83.252C216.541 83.252 217.885 83.38 219.207 83.636C220.53 83.8493 221.682 84.1693 222.663 84.596V83.124C222.663 81.2893 222.109 79.8813 220.999 78.9C219.89 77.9187 218.205 77.428 215.943 77.428C214.066 77.428 212.295 77.748 210.631 78.388C209.01 79.028 207.282 79.9453 205.447 81.14L202.375 74.612C204.594 73.1613 206.898 72.0733 209.287 71.348C211.719 70.6227 214.279 70.26 216.967 70.26C222.002 70.26 225.906 71.476 228.679 73.908C231.495 76.2973 232.903 79.7747 232.903 84.34V93.108C232.903 94.132 233.053 94.8573 233.351 95.284C233.693 95.668 234.269 95.9027 235.079 95.988V104.5C234.226 104.671 233.415 104.799 232.647 104.884C231.922 104.969 231.282 105.012 230.727 105.012C228.807 105.012 227.335 104.628 226.311 103.86C225.33 103.092 224.711 102.047 224.455 100.724L224.263 99.252C222.77 101.172 220.978 102.644 218.887 103.668C216.839 104.649 214.685 105.14 212.423 105.14C210.205 105.14 208.199 104.671 206.407 103.732C204.658 102.793 203.271 101.513 202.247 99.892C201.223 98.2707 200.711 96.4573 200.711 94.452ZM221.063 95.732C221.533 95.348 221.917 94.9213 222.215 94.452C222.514 93.9827 222.663 93.5347 222.663 93.108V90.1C221.81 89.7587 220.85 89.5027 219.783 89.332C218.759 89.1187 217.799 89.012 216.903 89.012C215.026 89.012 213.469 89.4387 212.231 90.292C210.994 91.1027 210.375 92.1907 210.375 93.556C210.375 94.324 210.589 95.028 211.015 95.668C211.442 96.308 212.018 96.82 212.743 97.204C213.511 97.588 214.407 97.78 215.431 97.78C216.455 97.78 217.479 97.588 218.503 97.204C219.527 96.82 220.381 96.3293 221.063 95.732ZM283.357 72.372C283.229 72.1587 282.781 71.8387 282.013 71.412C281.245 70.9427 280.285 70.452 279.133 69.94C277.981 69.428 276.722 68.98 275.357 68.596C273.992 68.212 272.626 68.02 271.261 68.02C269.469 68.02 268.082 68.34 267.101 68.98C266.12 69.5773 265.629 70.516 265.629 71.796C265.629 72.82 265.992 73.6307 266.717 74.228C267.485 74.8253 268.573 75.3587 269.981 75.828C271.389 76.2547 273.117 76.7667 275.165 77.364C278.066 78.132 280.584 79.0707 282.717 80.18C284.85 81.2467 286.472 82.6333 287.581 84.34C288.733 86.0467 289.309 88.308 289.309 91.124C289.309 93.684 288.84 95.86 287.901 97.652C286.962 99.4013 285.682 100.831 284.061 101.94C282.482 103.007 280.669 103.796 278.621 104.308C276.573 104.777 274.461 105.012 272.285 105.012C270.066 105.012 267.784 104.799 265.437 104.372C263.133 103.903 260.914 103.263 258.781 102.452C256.648 101.599 254.685 100.575 252.893 99.38L257.501 90.228C257.672 90.4413 258.226 90.8467 259.165 91.444C260.104 91.9987 261.256 92.596 262.621 93.236C264.029 93.8333 265.586 94.3667 267.293 94.836C269 95.3053 270.728 95.54 272.477 95.54C274.354 95.54 275.741 95.2413 276.637 94.644C277.576 94.0467 278.045 93.2147 278.045 92.148C278.045 90.996 277.554 90.1 276.573 89.46C275.634 88.82 274.333 88.244 272.669 87.732C271.048 87.22 269.17 86.644 267.037 86.004C264.264 85.1507 261.96 84.1907 260.125 83.124C258.333 82.0573 256.989 80.756 256.093 79.22C255.24 77.684 254.813 75.764 254.813 73.46C254.813 70.26 255.56 67.572 257.053 65.396C258.589 63.1773 260.637 61.5133 263.197 60.404C265.757 59.252 268.552 58.676 271.581 58.676C273.714 58.676 275.762 58.932 277.725 59.444C279.73 59.956 281.586 60.596 283.293 61.364C285.042 62.132 286.6 62.9 287.965 63.668L283.357 72.372ZM293.829 109.556C294.683 109.812 295.472 110.004 296.197 110.132C296.965 110.303 297.648 110.388 298.245 110.388C299.056 110.388 299.739 110.196 300.293 109.812C300.891 109.471 301.403 108.852 301.829 107.956C302.256 107.103 302.64 105.951 302.981 104.5L290.181 70.9H300.741L308.549 94.004L315.205 70.9H324.869L312.069 109.94C311.472 111.775 310.555 113.396 309.317 114.804C308.08 116.212 306.587 117.3 304.837 118.068C303.088 118.879 301.168 119.284 299.077 119.284C298.181 119.284 297.307 119.199 296.453 119.028C295.6 118.9 294.725 118.665 293.829 118.324V109.556ZM361.27 104.5H351.03V85.62C351.03 83.4013 350.603 81.8013 349.75 80.82C348.939 79.796 347.851 79.284 346.486 79.284C345.547 79.284 344.587 79.54 343.606 80.052C342.625 80.564 341.729 81.268 340.918 82.164C340.15 83.06 339.553 84.084 339.126 85.236V104.5H328.886V70.9H338.102V76.532C338.955 75.2093 340.022 74.0787 341.302 73.14C342.582 72.2013 344.054 71.4973 345.718 71.028C347.382 70.516 349.195 70.26 351.158 70.26C353.334 70.26 355.083 70.6653 356.406 71.476C357.771 72.244 358.795 73.268 359.478 74.548C360.203 75.828 360.673 77.2147 360.886 78.708C361.142 80.1587 361.27 81.588 361.27 82.996V104.5ZM380.937 105.14C378.079 105.14 375.284 104.671 372.553 103.732C369.823 102.793 367.519 101.407 365.641 99.572L369.161 93.108C371.209 94.6013 373.193 95.732 375.113 96.5C377.076 97.268 378.911 97.652 380.617 97.652C381.94 97.652 382.964 97.4387 383.689 97.012C384.415 96.5853 384.777 95.924 384.777 95.028C384.777 94.388 384.564 93.8973 384.137 93.556C383.711 93.172 383.049 92.8307 382.153 92.532C381.3 92.2333 380.233 91.9133 378.953 91.572C376.393 90.7187 374.26 89.8867 372.553 89.076C370.847 88.2653 369.567 87.284 368.713 86.132C367.86 84.9373 367.433 83.4013 367.433 81.524C367.433 79.2627 367.988 77.3 369.097 75.636C370.249 73.9293 371.871 72.6067 373.961 71.668C376.052 70.7293 378.548 70.26 381.449 70.26C383.753 70.26 385.993 70.6227 388.169 71.348C390.388 72.0733 392.457 73.2893 394.377 74.996L390.409 81.396C388.489 80.0733 386.783 79.1133 385.289 78.516C383.796 77.9187 382.345 77.62 380.937 77.62C380.212 77.62 379.551 77.7053 378.953 77.876C378.356 78.0467 377.865 78.3453 377.481 78.772C377.14 79.156 376.969 79.668 376.969 80.308C376.969 80.948 377.14 81.46 377.481 81.844C377.865 82.228 378.441 82.5693 379.209 82.868C380.02 83.124 381.023 83.444 382.217 83.828C384.991 84.6387 387.295 85.4707 389.129 86.324C390.964 87.1347 392.329 88.1587 393.225 89.396C394.164 90.5907 394.633 92.1907 394.633 94.196C394.633 97.6093 393.396 100.297 390.921 102.26C388.489 104.18 385.161 105.14 380.937 105.14ZM415.95 105.14C413.091 105.14 410.553 104.692 408.334 103.796C406.115 102.857 404.217 101.599 402.638 100.02C401.102 98.4413 399.929 96.628 399.118 94.58C398.307 92.4893 397.902 90.3133 397.902 88.052C397.902 84.8093 398.606 81.8653 400.014 79.22C401.465 76.532 403.534 74.3773 406.222 72.756C408.91 71.092 412.153 70.26 415.95 70.26C419.747 70.26 422.969 71.0707 425.614 72.692C428.302 74.3133 430.35 76.4467 431.758 79.092C433.166 81.6947 433.87 84.532 433.87 87.604C433.87 88.2013 433.827 88.7987 433.742 89.396C433.699 89.9507 433.657 90.4413 433.614 90.868H408.782C408.91 92.3613 409.315 93.62 409.998 94.644C410.723 95.668 411.641 96.4573 412.75 97.012C413.859 97.524 415.033 97.78 416.27 97.78C417.806 97.78 419.235 97.4173 420.558 96.692C421.923 95.9667 422.862 94.9853 423.374 93.748L432.078 96.18C431.225 97.9293 430.009 99.4867 428.43 100.852C426.894 102.175 425.059 103.22 422.926 103.988C420.835 104.756 418.51 105.14 415.95 105.14ZM408.526 84.596H423.118C422.947 83.188 422.542 81.972 421.902 80.948C421.262 79.8813 420.409 79.0707 419.342 78.516C418.275 77.9187 417.102 77.62 415.822 77.62C414.499 77.62 413.305 77.9187 412.238 78.516C411.214 79.0707 410.382 79.8813 409.742 80.948C409.102 81.972 408.697 83.188 408.526 84.596Z" fill="url(#paint1_linear_18_34)"/>
+            <defs>
+            <linearGradient id="paint0_linear_18_34" x1="63.576" y1="4" x2="63.576" y2="161" gradientUnits="userSpaceOnUse">
+            <stop offset="0.81" stop-color="#2CE197"/>
+            <stop offset="1" stop-color="#22B97C"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_18_34" x1="136.366" y1="82.5" x2="437.424" y2="82.5" gradientUnits="userSpaceOnUse">
+            <stop offset="0.591667" stop-color="#2CE197"/>
+            <stop offset="1" stop-color="#22B97C"/>
+            </linearGradient>
+            </defs>
+            </svg>
+            
+        </a>
+
+        <div class="md:hidden">
+          <button type="button" class="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white-50 dark:border-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" id="hs-navbar-page-demo-pricing-collapse" aria-expanded="false" aria-controls="hs-navbar-page-demo-pricing" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-page-demo-pricing">
+            <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+            <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="hs-navbar-page-demo-pricing" class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-page-demo-pricing-collapse">
+        <div class="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
+          <div class="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:gap-x-7 md:mt-0 md:ps-7 md:divide-y-0 md:divide-solid dark:divide-neutral-700">
+            
+
+            <div class="pt-3 md:pt-0">
+              <!-- <a class="py-2.5 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-shamrock-600 text-white-50 hover:bg-shamrock-500 focus:outline-none focus:bg-shamrock-500 disabled:opacity-50 disabled:pointer-events-none" href="#early-bird-pricing">
+                Early-Bird Offer
+              </a> -->
+              <button type="button" class="py-2.5 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-shamrock-600 text-white-50 hover:bg-shamrock-500 focus:outline-none focus:bg-shamrock-500 disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-slide-down-animation-modal" data-hs-overlay="#hs-slide-down-animation-modal">
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- End Header -->
+
+<!-- Hero -->
+<div class="relative">
+  <!-- Gradients -->
+  <div aria-hidden="true" class="flex -z-[1] absolute -top-48 start-0">
+    <div class="bg-shamrock-200 opacity-30 blur-3xl w-[1036px] h-[600px] dark:bg-shamrock-900 dark:opacity-20"></div>
+    <div class="bg-gray-200 opacity-90 blur-3xl w-[577px] h-[300px] transform translate-y-32 dark:bg-neutral-800/60"></div>
+  </div>
+  <!-- End Gradients -->
+
+  <div class="max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14 mx-auto">
+    <!-- Title -->
+    <div class="max-w-2xl mx-auto text-center mb-10">
+      <h2 class="text-3xl leading-tight font-bold md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight bg-clip-text bg-gradient-to-r from-shamrock-600 to-shamrock-700 text-transparent">An All-in-One Platform to Elevate Your Realtor Success</h2>
+      <p class="mt-2 lg:text-lg text-gray-800 dark:text-neutral-200">Simplify your workflow, manage everything in one place, and achieve more.</p>
+    </div>
+    <!-- End Title -->
+
+    <!-- Join Waitlist -->
+   
+    <!-- End Join Waitlist -->
+
+   
+  </div>
+
+  <div class="absolute top-1/2 start-1/2 -z-[1] transform -translate-y-1/2 -translate-x-1/2 w-[340px] h-[340px] border border-dashed border-shamrock-200 rounded-full dark:border-shamrock-900/60"></div>
+  <div class="absolute top-1/2 start-1/2 -z-[1] transform -translate-y-1/2 -translate-x-1/2 w-[575px] h-[575px] border border-dashed border-shamrock-200 rounded-full opacity-80 dark:border-shamrock-900/60"></div>
+  <div class="absolute top-1/2 start-1/2 -z-[1] transform -translate-y-1/2 -translate-x-1/2 w-[840px] h-[840px] border border-dashed border-shamrock-200 rounded-full opacity-60 dark:border-shamrock-900/60"></div>
+  <div class="absolute top-1/2 start-1/2 -z-[1] transform -translate-y-1/2 -translate-x-1/2 w-[1080px] h-[1080px] border border-dashed border-shamrock-200 rounded-full opacity-40 dark:border-shamrock-900/60"></div>
+</div>
+<!-- End Hero -->
+
+<!-- Track contacts Features -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Grid -->
+  <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
+    <div>
+     
+      <img class="rounded-xl" src="images/contacts_land.png" alt="Features Image">
+    </div>
+    <!-- End Col -->
+
+    <div class="mt-5 sm:mt-10 lg:mt-0">
+      <div class="space-y-6 sm:space-y-8">
+        <!-- Title -->
+        <div class="space-y-2 md:space-y-4">
+          <h2 class="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-neutral-200">
+            Effortlessly Manage Your Contacts
+          </h2>
+          <p class="text-gray-500 dark:text-neutral-500">
+            Keep every detail organized in one place, qualify leads with ease, and never miss an opportunity to connect.
+          </p>
+        </div>
+        <!-- End Title -->
+
+        <!-- List -->
+        <ul class="space-y-2 sm:space-y-4">
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                <span class="font-bold">Customizable</span> Lead Qualification
+              </span>
+            </div>
+          </li>
+
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Automated <span class="font-bold">Follow-Up Reminders</span>
+              </span>
+            </div>
+          </li>
+
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Centralized Contact Management
+              </span>
+            </div>
+          </li>
+        </ul>
+        <!-- End List -->
+      </div>
+    </div>
+    <!-- End Col -->
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Track contacts Features -->
+
+<!-- Track transactions Features -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Grid -->
+  <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
+    
+    <!-- End Col -->
+
+    <div class="mt-5 sm:mt-10 lg:mt-0">
+      <div class="space-y-6 sm:space-y-8">
+        <!-- Title -->
+        <div class="space-y-2 md:space-y-4">
+          <h2 class="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-neutral-200">
+            Streamline Your Transaction Process
+          </h2>
+          <p class="text-gray-500 dark:text-neutral-500">
+            Keep every deal on track with real-time updates and centralized records. Manage contracts, deadlines, and progress effortlessly.
+          </p>
+        </div>
+        <!-- End Title -->
+
+        <!-- List -->
+        <ul class="space-y-2 sm:space-y-4">
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                <span class="font-bold">Real-Time</span> Updates
+              </span>
+            </div>
+          </li>
+
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Progress tracking
+              </span>
+            </div>
+          </li>
+
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Centralized Records
+              </span>
+            </div>
+          </li>
+        </ul>
+        <!-- End List -->
+      </div>
+    </div>
+    <!-- End Col -->
+    <div>
+      <img class="rounded-xl" src="images/transactionc_land.png" alt="Features Image">
+    </div>
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Track transactions Features -->
+
+<!-- Track tasks Features -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Grid -->
+  <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
+    <div>
+      <img class="rounded-xl" src="images/tasks_land.png" alt="Features Image">
+    </div>
+    <!-- End Col -->
+
+    <div class="mt-5 sm:mt-10 lg:mt-0">
+      <div class="space-y-6 sm:space-y-8">
+        <!-- Title -->
+        <div class="space-y-2 md:space-y-4">
+          <h2 class="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-neutral-200">
+            Stay on Top of Every Task
+          </h2>
+          <p class="text-gray-500 dark:text-neutral-500">
+            Organize, prioritize, and track your daily tasks with ease. Ensure nothing falls through the cracks and keep your workflow seamless.
+          </p>
+        </div>
+        <!-- End Title -->
+
+        <!-- List -->
+        <ul class="space-y-2 sm:space-y-4">
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Task <span class="font-bold">prioritization</span>
+              </span>
+            </div>
+          </li>
+
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Seamless workflow management
+              </span>
+            </div>
+          </li>
+
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Deadline reminders
+              </span>
+            </div>
+          </li>
+        </ul>
+        <!-- End List -->
+      </div>
+    </div>
+    <!-- End Col -->
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Track tasks Features -->
+
+
+<!-- Track documents Features -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Grid -->
+  <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
+    
+    <!-- End Col -->
+
+    <div class="mt-5 sm:mt-10 lg:mt-0">
+      <div class="space-y-6 sm:space-y-8">
+        <!-- Title -->
+        <div class="space-y-2 md:space-y-4">
+          <h2 class="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-neutral-200">
+            Effortlessly Manage Your Documents
+          </h2>
+          <p class="text-gray-500 dark:text-neutral-500">
+            Store, access, and organize all your important documents in one secure place. Keep everything you need at your fingertips.
+          </p>
+        </div>
+        <!-- End Title -->
+
+        <!-- List -->
+        <ul class="space-y-2 sm:space-y-4">
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Easy access anytime
+              </span>
+            </div>
+          </li>
+
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Organized digital filing
+              </span>
+            </div>
+          </li>
+
+          
+        </ul>
+        <!-- End List -->
+      </div>
+    </div>
+    <!-- End Col -->
+    <div>
+      <img class="rounded-xl" src="images/documents_land.jpeg" alt="Features Image">
+    </div>
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Track documents Features -->
+
+<!-- Dynamic dashboard Features -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Grid -->
+  <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
+    <div>
+      <img class="rounded-xl" src="static 'images/dashboards_land.jpeg" alt="Features Image">
+    </div>
+    <!-- End Col -->
+
+    <div class="mt-5 sm:mt-10 lg:mt-0">
+      <div class="space-y-6 sm:space-y-8">
+        <!-- Title -->
+        <div class="space-y-2 md:space-y-4">
+          <h2 class="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-neutral-200">
+            Your Personalized Insights Hub
+          </h2>
+          <p class="text-gray-500 dark:text-neutral-500">
+            Tailor your dashboard to fit your needs. Access customized reports and track performance with monthly, quarterly, and yearly overviews.
+          </p>
+        </div>
+        <!-- End Title -->
+
+        <!-- List -->
+        <ul class="space-y-2 sm:space-y-4">
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                <span class="font-bold">Customizable</span> insights
+              </span>
+            </div>
+          </li>
+
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Detailed <span class="font-bold">report generation</span>
+              </span>
+            </div>
+          </li>
+
+          <li class="flex gap-x-3">
+            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div class="grow">
+              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
+                Real-time performance tracking
+              </span>
+            </div>
+          </li>
+        </ul>
+        <!-- End List -->
+      </div>
+    </div>
+    <!-- End Col -->
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Dynamic dashboard Features -->
+
+
+
+<!-- Pricing -->
+<div id="early-bird-pricing" class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Title -->
+  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Early-Bird Pricing</h2>
+    <p class="mt-1 text-gray-600 dark:text-neutral-400">Unlock special pre-launch rates. Sign up now to enjoy exclusive pricing before we go live.</p>
+  </div>
+  <!-- End Title -->
+
+   <!-- Grid -->
+ <div class="mt-6 md:mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-3 xl:gap-6 lg:items-center">
+  <!-- Card -->
+  <div class="flex flex-col bg-white-50 border border-gray-200 text-center rounded-2xl p-4 md:p-8 dark:bg-neutral-900 dark:border-neutral-800">
+    <h4 class="font-medium text-lg text-gray-800 dark:text-neutral-200">1 month</h4>
+    <span class="mt-5 font-bold text-3xl md:text-4xl xl:text-5xl text-gray-800 dark:text-neutral-200">
+      <span class="line-through text-gray-500 dark:text-gray-600">₦12,000</span> ₦7,500
+    </span>
+
+    <a class="mt-5 py-3 px-4 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-shamrock-600 text-shamrock-600 hover:border-shamrock-500 hover:text-white-50 hover:bg-shamrock-500 focus:outline-none focus:border-shamrock-500 focus:text-shamrock-500 disabled:opacity-50 disabled:pointer-events-none dark:border-shamrock-500 dark:text-shamrock-500 dark:hover:text-shamrock-400 dark:hover:border-shamrock-400 dark:focus:text-shamrock-400 dark:focus:border-shamrock-400" href="#">
+      Claim Offer
+    </a>
+  </div>
+  <!-- End Card -->
+
+  <!-- Card -->
+  <div class="flex flex-col bg-white-50 border border-gray-200 text-center rounded-2xl p-4 md:p-8 dark:bg-neutral-900 dark:border-neutral-800">
+    <h4 class="font-medium text-lg text-gray-800 dark:text-neutral-200">6 months</h4>
+    <span class="mt-5 font-bold text-3xl md:text-4xl xl:text-5xl text-gray-800 dark:text-neutral-200">
+      <span class="line-through text-gray-500 dark:text-gray-600">₦60,000</span> ₦37,500
+    </span>
+
+    <a class="mt-5 py-3 px-4 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-shamrock-600 text-shamrock-600 hover:border-shamrock-500 hover:text-white-50 hover:bg-shamrock-500 focus:outline-none focus:border-shamrock-500 focus:text-shamrock-500 disabled:opacity-50 disabled:pointer-events-none dark:border-shamrock-500 dark:text-shamrock-500 dark:hover:text-shamrock-400 dark:hover:border-shamrock-400 dark:focus:text-shamrock-400 dark:focus:border-shamrock-400" href="#">
+      Claim Offer
+    </a>
+  </div>
+  <!-- End Card -->
+
+  <!-- Card -->
+  <div class="flex flex-col bg-white-50 border border-gray-200 text-center rounded-2xl p-4 md:p-8 dark:bg-neutral-900 dark:border-neutral-800">
+    <h4 class="font-medium text-lg text-gray-800 dark:text-neutral-200">1 year</h4>
+    <span class="mt-5 font-bold text-3xl md:text-4xl xl:text-5xl text-gray-800 dark:text-neutral-200">
+      <span class="line-through text-gray-500 dark:text-gray-600">₦120,000</span> ₦75,000
+    </span>
+
+    <a class="mt-5 py-3 px-4 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-shamrock-600 text-shamrock-600 hover:border-shamrock-500 hover:text-white-50 hover:bg-shamrock-500 focus:outline-none focus:border-shamrock-500 focus:text-shamrock-500 disabled:opacity-50 disabled:pointer-events-none dark:border-shamrock-500 dark:text-shamrock-500 dark:hover:text-shamrock-400 dark:hover:border-shamrock-400 dark:focus:text-shamrock-400 dark:focus:border-shamrock-400" href="#">
+      Claim Offer
+    </a>
+  </div>
+  <!-- End Card -->
+
+
+</div>
+<!-- End Grid -->
+
+  </div>
+
+
+
+
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="mt-auto bg-white-50 w-full dark:bg-white-950">
+  <div class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
+    
+
+    <div class="mt-5 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
+      <div class="flex justify-between items-center">
+        <p class="text-sm text-gray-400 dark:text-neutral-400">© 2022 Preline. All rights reserved.</p>
+      </div>
+      <!-- End Col -->
+
+      <!-- Social Brands -->
+      <div>
+        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-black hover:bg-white/10 focus:outline-none focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+          </svg>
+        </a>
+        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-black hover:bg-white/10 focus:outline-none focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+          </svg>
+        </a>
+        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-black hover:bg-white/10 focus:outline-none focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+          </svg>
+        </a>
+        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-black hover:bg-white/10 focus:outline-none focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+        </a>
+        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-black hover:bg-white/10 focus:outline-none focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z"/>
+          </svg>
+        </a>
+      </div>
+      <!-- End Social Brands -->
+    </div>
+  </div>
+</footer>
+<!-- ========== END FOOTER ========== -->
+</main>
+<script>
+    // IMPORTANT: This script block must come AFTER the Tailwind CDN script
+    // and BEFORE any other scripts that rely on Tailwind's configuration (like Preline).
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'charade': {
+                50: '#f6f7f9',
+                100: '#eceef2',
+                200: '#d4d8e3',
+                300: '#afb6ca',
+                400: '#838fad',
+                500: '#647193',
+                600: '#4f597a',
+                700: '#414963',
+                800: '#383f54',
+                900: '#2b2f3d',
+                950: '#212430',
+            },
+            'shamrock': {
+                50: '#ebfef4',
+                100: '#cefde3',
+                200: '#a1f9cd',
+                300: '#64f1b3',
+                400: '#2ce197',
+                500: '#02c77d',
+                600: '#00a267',
+                700: '#008255',
+                800: '#006645',
+                900: '#00543a',
+                950: '#003022',
+            },
+            'white-50': '#F9FAFB', // If this is intended as a very light white/off-white
+          }
+        }
+      },
+      darkMode: 'class', // Crucial for dark: classes to work
+    }
+  </script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/preline@3.1.0/dist/preline.min.js"></script>
+</body>
+</html>
+
